@@ -133,14 +133,25 @@ void excluirPosicao(tLista* pLista){
 
 int main() {
 
-  int r1,r2,fonte,opcao;
+int r1,r2,fonte,opcao;
 
-  tLista* circuito = new tLista;
+tLista* circuito = new tLista;
 
 
 inicializaLista(circuito);
-  cout << endl <<"Escolha uma das opcoes abaixo:"<<endl;
-  cout << "1 - Ler do banco de dados"<<endl;
-  cout << "2 - Gravar no banco de dados"<<endl;
-  cout << "3 - Encerrar programa"<<endl;
-  cin >> opcao;
+cout << endl <<"Escolha uma das opcoes abaixo:"<<endl;
+cout << "1 - Ler do banco de dados"<<endl;
+cout << "2 - Gravar no banco de dados"<<endl;
+cout << "3 - Encerrar programa"<<endl;
+cin >> opcao;
+
+
+cout << "Escolha uma das opcoes abaixo:"<<endl;
+cout << "1 - Ler do banco de dados"<<endl;
+cout << "2 - Gravar no banco de dados"<<endl;
+cout << "3 - Encerrar programa"<<endl;
+cin >> opcao;   
+
+  }
+   
+}
