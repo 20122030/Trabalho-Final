@@ -110,6 +110,29 @@ void gravarDados(tLista* pLista){
 
 }
 
+void excluirPosicao(tLista* pLista){
+  tNo* anterior;
+  tNo* aux;
+  tNo* apagado;
+
+  if(!listaVazia(pLista)){
+    pLista->marcador = pLista->primeiro;
+
+    while(!finalLista(pLista)){
+      aux = pLista->marcador->proximo;
+      apagado = pLista->marcador;
+      free(apagado);
+      pLista->marcador = aux;
+        
+    }
+    inicializaLista(pLista);
+   
+  }
+}
+
+
+
+
 
 
 
