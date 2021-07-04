@@ -33,3 +33,22 @@ struct tLista{
   tNo* marcador;
   int tamanho;
 };
+
+void inicializaLista(tLista* pLista){
+  pLista -> primeiro = NULL;
+  pLista -> ultimo = NULL;
+  pLista -> marcador = NULL;
+  pLista -> tamanho = 0;
+}
+
+int obterTamanho(tLista* pLista){
+  return pLista->tamanho;
+}
+
+bool listaVazia(tLista* pLista){
+  return (pLista -> tamanho == 0);
+}
+
+bool finalLista(tLista* pLista){
+  return (pLista->marcador == NULL);
+}
