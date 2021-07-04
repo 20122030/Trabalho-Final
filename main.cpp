@@ -146,6 +146,46 @@ cout << "3 - Encerrar programa"<<endl;
 cin >> opcao;
 
 
+while(opcao != 3){
+    //if de cada opcao
+    if(opcao ==1){
+      //ler do banco, inserir dados na estrutura, inserir estrutura na lista
+      excluirPosicao(circuito);
+      ifstream banco ("bancoDeDados.txt");
+      while(!banco.eof()){
+        banco >> r1 >> r2 >> fonte;
+        incluirNoFim(circuito, r1, r2, fonte);
+      }
+      banco.close();
+      //imprimir lista
+      imprimirLista(circuito);
+    }else if(opcao == 2){
+
+      int quantidade;
+      cout << "informe quantos elementos deseja gravar"<<endl;
+      cin >> quantidade;
+      cout <<endl;
+
+      int aux=0;
+      while(aux < quantidade){
+
+        cout << "r1= ";
+        cin >> r1;
+        cout << "r2= ";
+        cin >> r2;
+        cout << "fonte= ";
+        cin >> fonte;
+        cout << endl;
+        incluirNoFim(circuito, r1, r2, fonte);
+        aux++;
+      }
+
+    }else if(opcao == 3)
+        return 0;
+
+    gravarDados(circuito);
+
+
 cout << "Escolha uma das opcoes abaixo:"<<endl;
 cout << "1 - Ler do banco de dados"<<endl;
 cout << "2 - Gravar no banco de dados"<<endl;
