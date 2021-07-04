@@ -16,3 +16,13 @@ struct tNo{
   tCircuito data;
   tNo* proximo;
 };
+tNo* criaNo(int r1, int r2, int fonte){
+  tNo* no = new tNo;
+
+  no -> data.valorR1 = r1;
+  no -> data.valorR2 = r2;
+  no -> data.valorFonte = fonte;
+  no -> proximo = NULL;
+
+  return no;
+}
