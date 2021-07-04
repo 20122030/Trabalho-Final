@@ -84,3 +84,13 @@ void imprimirLista(tLista* pLista){
     pLista->marcador = pLista->marcador->proximo;
   }
 }
+
+
+
+
+
+int main() {
+
+  int r1,r2,fonte,opcao;
+
+  tLista* circuito = new tLista;
