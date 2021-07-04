@@ -26,3 +26,10 @@ tNo* criaNo(int r1, int r2, int fonte){
 
   return no;
 }
+
+struct tLista{
+  tNo* primeiro;
+  tNo* ultimo;
+  tNo* marcador;
+  int tamanho;
+};
