@@ -52,3 +52,19 @@ bool listaVazia(tLista* pLista){
 bool finalLista(tLista* pLista){
   return (pLista->marcador == NULL);
 }
+
+void incluirNoFim(tLista* pLista, int r1, int r2, int fonte){
+  tNo* no;
+  no = criaNo(r1,r2,fonte);
+
+  if(listaVazia(pLista)){
+    pLista -> primeiro = no;
+  }
+  else{
+    pLista -> ultimo -> proximo = no;
+  }
+
+  pLista -> ultimo = no;
+  pLista -> marcador = no;
+  pLista -> tamanho++;
+}
