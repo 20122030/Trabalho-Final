@@ -9,3 +9,10 @@ struct tCircuito{
   int valorR2;
   int valorFonte;
 };
+
+//código ensinado pelo professor
+
+struct tNo{
+  tCircuito data;
+  tNo* proximo;
+};
