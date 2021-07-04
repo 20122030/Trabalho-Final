@@ -85,6 +85,14 @@ void imprimirLista(tLista* pLista){
   }
 }
 
+void gravarDados(tLista* pLista){
+
+  ofstream banco("bancoDeDados.txt");
+  //enquanto n for o final da lista, gravar no arquivo
+  
+  pLista->marcador = pLista->primeiro;
+  int ultimaLinha= obterTamanho(pLista);
+  int aux=0;
 
 
 
