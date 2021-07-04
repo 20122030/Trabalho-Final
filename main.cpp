@@ -94,6 +94,22 @@ void gravarDados(tLista* pLista){
   int ultimaLinha= obterTamanho(pLista);
   int aux=0;
 
+  while(!finalLista(pLista)){
+        
+    banco << pLista->marcador->data.valorR1 <<" "<<pLista->marcador->data.valorR2<<" "<<pLista->marcador->data.valorFonte;
+      
+    if(aux < ultimaLinha-1){
+      banco << endl;
+      aux++;
+    }
+      pLista->marcador = pLista->marcador->proximo;
+    
+  }
+
+  banco.close();
+
+}
+
 
 
 
