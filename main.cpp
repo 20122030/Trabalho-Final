@@ -67,4 +67,20 @@ void incluirNoFim(tLista* pLista, int r1, int r2, int fonte){
   pLista -> ultimo = no;
   pLista -> marcador = no;
   pLista -> tamanho++;
+} 
+
+void imprimirLista(tLista* pLista){
+  pLista->marcador = pLista->primeiro;
+
+  while(!finalLista(pLista)){
+    //uma variavel pra cada dado
+    int res1 = pLista->marcador->data.valorR1;
+    int res2 = pLista->marcador->data.valorR2;
+    int vFonte = pLista->marcador->data.valorFonte;
+    cout << "R1: " << res1 <<" ";
+    cout << "R2: " << res2 <<" ";
+    cout << "Fonte: " << vFonte <<endl;
+    
+    pLista->marcador = pLista->marcador->proximo;
+  }
 }
